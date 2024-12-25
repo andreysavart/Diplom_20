@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Список заказов</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+{% for order in orders %}
+    <div><a href="{% url 'order_detail' order.id %}">Заказ №{{order.id}} от {{order.created_at}}</a></div>
+{% endfor %}
+</body>
+</html>

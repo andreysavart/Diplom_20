@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Список шайб</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+{% for washer in washers %}
+    <div><a href="{% url 'washer_detail' washer.id %}">Шайба {{washer.diameter}}</a></div>
+{% endfor %}
+</body>
+</html>

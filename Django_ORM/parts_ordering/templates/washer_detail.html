@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Параметры шайбы</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div> 
+        Шайба №{{ washer.pk }}
+    </div>
+    <div> 
+        Название: {{ washer.name }}
+    </div>
+    <div> 
+        Диаметр: {{ washer.diameter }}
+    </div>
+    <div> 
+        Класс точности: {{ washer.accuracy_class }}
+    </div>
+    <div> 
+        Класс прочности: {{ washer.strength_class }}
+    </div>
+    <div> 
+        Масса, кг: {{ washer.weight }}
+    </div>
+    <div> 
+        Стоимость, руб: {{ washer.cost }}
+    </div>
+</body>
+</html>

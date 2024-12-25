@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Список гаек</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+{% for nut in nuts %}
+    <div><a href="{% url 'nut_detail' nut.id %}">Гайка M{{nut.diameter}}</a></div>
+{% endfor %}
+</body>
+</html>

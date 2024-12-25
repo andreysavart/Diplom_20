@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Параметры гайки</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div> 
+        Гайка №{{ nut.pk }}
+    </div>
+    <div> 
+        Название: {{ nut.name }}
+    </div>
+    <div> 
+        Диаметр: {{ nut.diameter }}
+    </div>
+    <div> 
+        Размер под ключ, мм: {{ nut.size }}
+    </div>
+    <div> 
+        Класс точности: {{ nut.accuracy_class }}
+    </div>
+    <div> 
+        Класс прочности: {{ nut.strength_class }}
+    </div>
+    <div> 
+        Масса, кг: {{ nut.weight }}
+    </div>
+    <div> 
+        Стоимость, руб: {{ nut.cost }}
+    </div>
+</body>
+</html>

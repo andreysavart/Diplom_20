@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Список заказов</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div> 
+        Заказ №{{ order.pk }}
+    </div>
+    <div> 
+        Заказчик: {{ order.customer }}
+    </div>
+    {% for item in order.order_items.all %}
+        <div> 
+            Позиция №{{ forloop.counter }}: <a href="{% url 'bolt_joint_detail' object.id %}">{{ item }}</a>
+        </div>
+    {% endfor %}
+    <div> 
+        Общий вес: {{ order.weight }}, кг
+    </div>
+    <div> 
+        Стоимость заказа: {{ order.cost }}, руб
+    </div>
+</body>
+</html>

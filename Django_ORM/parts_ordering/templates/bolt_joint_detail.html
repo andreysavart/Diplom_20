@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Болтовое соединение</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div> 
+        Болтовое соединение №{{ boltjoint.pk }}
+    </div>
+    <div> 
+        Болт: <a href="{% url 'bolt_detail' object.bolt.id %}">{{ boltjoint.bolt }}</a>
+    </div>
+    <div> 
+        Шайба 1: <a href="{% url 'washer_detail' object.bolt_washer.id %}">{{ boltjoint.bolt_washer }}</a>
+    </div>
+    <div> 
+        Материал: {{ boltjoint.material }}
+    </div>
+    <div> 
+        Шайба 2: <a href="{% url 'washer_detail' object.nut_washer.id %}">{{ boltjoint.nut_washer }}</a>
+    </div>
+    <div> 
+        Гайка: <a href="{% url 'nut_detail' object.nut.id %}">{{ boltjoint.nut }}</a>
+    </div>
+    <div> 
+        Контргайка: <a href="{% url 'nut_detail' object.locknut.id %}">{{ boltjoint.locknut }}</a>
+    </div>
+    <div> 
+        Общий вес: {{ boltjoint.weight }}, кг
+    </div>
+    <div> 
+        Стоимость болтового соединения: {{ boltjoint.cost }}, руб
+    </div>
+</body>
+</html>

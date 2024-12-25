@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Список болтов</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+{% for bolt in bolts %}
+    <div><a href="{% url 'bolt_detail' bolt.id %}">Болт M{{bolt.diameter}}</a></div>
+{% endfor %}
+</body>
+</html>

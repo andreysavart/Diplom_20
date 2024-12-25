@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Параметры болта</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div> 
+        Болт №{{ bolt.pk }}
+    </div>
+    <div> 
+        Название: {{ bolt.name }}
+    </div>
+    <div> 
+        Диаметр: {{ bolt.diameter }}
+    </div>
+    <div> 
+        Длина: {{ bolt.length }}
+    </div>
+    <div> 
+        Размер под ключ, мм: {{ bolt.size }}
+    </div>
+    <div> 
+        Класс точности: {{ bolt.accuracy_class }}
+    </div>
+    <div> 
+        Класс прочности: {{ bolt.strength_class }}
+    </div>
+    <div> 
+        Масса, кг: {{ bolt.weight }}
+    </div>
+    <div> 
+        Стоимость, руб: {{ bolt.cost }}
+    </div>
+</body>
+</html>
